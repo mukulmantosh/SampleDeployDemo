@@ -46,7 +46,7 @@ jobs:
   DeployProd:
     name: Deploy to Production
     if: github.event.ref == 'refs/heads/master'
-    needs: [DeployStaging]
+    needs: [Build]
     runs-on: ubuntu-latest
     environment:
       name: Production
